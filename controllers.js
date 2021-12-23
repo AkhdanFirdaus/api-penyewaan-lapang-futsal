@@ -144,13 +144,13 @@ export const LocationController = {
                 })
 
                 const transaction = new Transaction({
-                    transaction_date: new Date(),
+                    transaction_date: req.body.transaction_date,
                     total: req.body.total,
                     payment_price: req.body.payment_price,
                     change: req.body.change,
                     customer: req.body.customer,
                     transaction_details: transactionId,
-                    created_at: new Date(),
+                    created_at: req.body.created_at,
                 })
 
                 await transaction.save()
@@ -240,22 +240,70 @@ export const TransactionDetailController = {
 }
 
 export const ReportController = {
-    weekly: async (req, res) => {
-        const result = Transaction.aggregate([
+    daily: async (req, res) => {
+        const filter = req.params.date
+        const result = await Transaction.aggregate([
             {
                 $group: {
-                    _id: "$transaction_date",
-                    week: {$sum: {$multiply: ["$total", 1]}},
-                    month: {$sum: {$multiply: ["$total", 30]}},
-                    year: {$sum: {$multiply: ["$total", 365]}},
+                    _id: {
+                        year: {$year: "$transaction_date"},
+                        month: {$month: "$transaction_date"},
+                        dayOfMonth: {$dayOfMonth: "$transaction_date"},
+                    },
+                    value: {$sum: "$total"},
                     count: {$sum: 1},
-                }
+                },
             },
-            { $out: "agg_alternative_1" }
         ])
 
         res.status(200).json(result)
     },
-    monthly: async (req, res) => {},
-    yearly: async (req, res) => {},
+    weekly: async (req, res) => {
+        const filter = req.params.date
+        const result = await Transaction.aggregate([
+            {
+                $group: {
+                    _id: {
+                        week: {$week: "$transaction_date"}
+                    },
+                    value: {$sum: "$total"},
+                    count: {$sum: 1},
+                },
+            },
+        ])
+
+        res.status(200).json(result)
+    },
+    monthly: async (req, res) => {
+        const filter = req.params.date
+        const result = await Transaction.aggregate([
+            {
+                $group: {
+                    _id: {
+                        month: {$month: "$transaction_date"}
+                    },
+                    value: {$sum: "$total"},
+                    count: {$sum: 1},
+                },
+            },
+        ])
+
+        res.status(200).json(result)
+    },
+    yearly: async (req, res) => {
+        const filter = req.params.date
+        const result = await Transaction.aggregate([
+            {
+                $group: {
+                    _id: {
+                        year: {$year: "$transaction_date"}
+                    },
+                    value: {$sum: "$total"},
+                    count: {$sum: 1},
+                },
+            },
+        ])
+
+        res.status(200).json(result)
+    },
 }
