@@ -11,7 +11,7 @@ const Customer = mongoose.model(
 )
 
 const Location = mongoose.model(
-    "location",
+    "Location",
     mongoose.Schema({
         name: String,
         price: Number,
@@ -29,7 +29,16 @@ const Transaction = mongoose.model(
         total: Number,
         payment_price: Number,
         change: Number,
-        customer_id: Number,
+        customer: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Customer',
+        },
+        transaction_details: [
+            {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: 'TransactionDetail'
+            }
+        ],
         created_at: Date,
     })
 )
@@ -37,8 +46,10 @@ const Transaction = mongoose.model(
 const TransactionDetail = mongoose.model(
     "TransactionDetail",
     mongoose.Schema({
-        transaction_id: Number,
-        location_id: Number,
+        location: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Location',
+        },
         start: Date,
         end: Date,
         subtotal: Number,

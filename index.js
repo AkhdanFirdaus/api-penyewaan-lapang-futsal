@@ -13,8 +13,7 @@ connection.once('open', () => console.log("Berhasil koneksi database"))
 
 const app = express()
 
-app.use(cors())
-app.use(express.json())
+app.use(cors(), express.json())
 
 app.use('/', routes)
 
