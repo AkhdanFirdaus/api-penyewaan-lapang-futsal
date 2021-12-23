@@ -27,9 +27,9 @@ routes.post('/transaction_details/', TransactionDetailController.save)
 routes.delete('/transaction_details/:id', TransactionDetailController.delete)
 routes.patch('/transaction_details/:id', TransactionDetailController.update)
 
-routes.get('/report/daily/:date', ReportController.daily)
-routes.get('/report/weekly/:date', ReportController.weekly)
-routes.get('/report/monthly/:date', ReportController.monthly)
-routes.get('/report/yearly/:date', ReportController.yearly)
+routes.get('/report/daily/', ReportController.daily)
+routes.get('/report/weekly/', ReportController.weekly)
+routes.get('/report/monthly/', ReportController.monthly)
+routes.get('/report/yearly/', ReportController.yearly)
 
 export default routes

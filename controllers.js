@@ -241,7 +241,6 @@ export const TransactionDetailController = {
 
 export const ReportController = {
     daily: async (req, res) => {
-        const filter = req.params.date
         const result = await Transaction.aggregate([
             {
                 $group: {
@@ -259,7 +258,6 @@ export const ReportController = {
         res.status(200).json(result)
     },
     weekly: async (req, res) => {
-        const filter = req.params.date
         const result = await Transaction.aggregate([
             {
                 $group: {
@@ -275,7 +273,6 @@ export const ReportController = {
         res.status(200).json(result)
     },
     monthly: async (req, res) => {
-        const filter = req.params.date
         const result = await Transaction.aggregate([
             {
                 $group: {
@@ -291,7 +288,6 @@ export const ReportController = {
         res.status(200).json(result)
     },
     yearly: async (req, res) => {
-        const filter = req.params.date
         const result = await Transaction.aggregate([
             {
                 $group: {
