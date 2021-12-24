@@ -108,9 +108,9 @@ export const LocationController = {
             res.status(500).json({message: error})
         }
     },
-    }
+}
 
-    export const TransactionController = {
+export const TransactionController = {
     readAll: async (req, res) => {
             try {
                 const transactions = await Transaction.find().populate('customer').populate('transaction_details')
