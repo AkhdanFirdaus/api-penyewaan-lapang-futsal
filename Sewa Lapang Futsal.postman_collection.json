@@ -1,0 +1,562 @@
+{
+	"info": {
+		"_postman_id": "dc0ce749-b1d5-47be-b8e2-24798c563700",
+		"name": "Sewa Lapang Futsal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Get Customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/customers/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Rizal\",\r\n    \"phone_number\": \"08213123131\",\r\n    \"address\": \"RUmah\",\r\n    \"created_at\": \"Wed Dec 22 2021 17:54:27 GMT+0700 (Western Indonesia Time)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/customers/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/customers/61c3042350d90ca15730d78f",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customers",
+								"61c3042350d90ca15730d78f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/customers/61c3041a50d90ca15730d78d",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customers",
+								"61c3041a50d90ca15730d78d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Akhdan Firdaus\",\r\n    \"phone_number\": \"08213123131\",\r\n    \"address\": \"RUmah\",\r\n    \"created_at\": \"Wed Dec 22 2021 17:54:27 GMT+0700 (Western Indonesia Time)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/customers/61c3041a50d90ca15730d78d",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customers",
+								"61c3041a50d90ca15730d78d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Location",
+			"item": [
+				{
+					"name": "Get Location",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/locations/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"locations",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Location",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Rizal\",\r\n    \"phone_number\": \"08213123131\",\r\n    \"address\": \"RUmah\",\r\n    \"created_at\": \"Wed Dec 22 2021 17:54:27 GMT+0700 (Western Indonesia Time)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/locations/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"locations",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Location",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/locations/61c3042350d90ca15730d78f",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"locations",
+								"61c3042350d90ca15730d78f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Location",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/customers/61c3041a50d90ca15730d78d",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customers",
+								"61c3041a50d90ca15730d78d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Location",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Akhdan Firdaus\",\r\n    \"phone_number\": \"08213123131\",\r\n    \"address\": \"RUmah\",\r\n    \"created_at\": \"Wed Dec 22 2021 17:54:27 GMT+0700 (Western Indonesia Time)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/customers/61c3041a50d90ca15730d78d",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customers",
+								"61c3041a50d90ca15730d78d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "Get Transaction",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/transactions/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transactions",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transaction_date\": \"Wed Nov 24 2021 17:54:27 GMT+0700 (Western Indonesia Time)\",\r\n    \"total\": 40000,\r\n    \"payment_price\": 50000,\r\n    \"change\": 10000,\r\n    \"customer\": \"61c3041a50d90ca15730d78d\",\r\n    \"transaction_details\": [\r\n        {\r\n            \"location\": \"61c3e784f7d7442eaa3cc721\",\r\n            \"start\": \"Wed Nov 22 2021 17:54:27 GMT+0700 (Western Indonesia Time)\",\r\n            \"end\": \"Wed Nov 24 2021 17:54:27 GMT+0700 (Western Indonesia Time)\",\r\n            \"subtotal\": 40000,\r\n            \"created_at\": \"Wed Nov 24 2021 17:54:27 GMT+0700 (Western Indonesia Time)\"\r\n        },\r\n        {\r\n            \"location\": \"61c3e784f7d7442eaa3cc721\",\r\n            \"start\": \"Wed Dec 22 2021 17:54:27 GMT+0700 (Western Indonesia Time)\",\r\n            \"end\": \"Wed Dec 24 2021 17:54:27 GMT+0700 (Western Indonesia Time)\",\r\n            \"subtotal\": 40000,\r\n            \"created_at\": \"Wed Nov 24 2021 17:54:27 GMT+0700 (Western Indonesia Time)\"\r\n        }\r\n    ],\r\n    \"created_at\": \"Wed Nov 24 2021 17:54:27 GMT+0700 (Western Indonesia Time)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/transactions/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transactions",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Transaction",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/transactions/61c3042350d90ca15730d78f",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transactions",
+								"61c3042350d90ca15730d78f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Transaction",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/transactions/61c3041a50d90ca15730d78d",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transactions",
+								"61c3041a50d90ca15730d78d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Transaction",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Akhdan Firdaus\",\r\n    \"phone_number\": \"08213123131\",\r\n    \"address\": \"RUmah\",\r\n    \"created_at\": \"Wed Dec 22 2021 17:54:27 GMT+0700 (Western Indonesia Time)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/transactions/61c3041a50d90ca15730d78d",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transactions",
+								"61c3041a50d90ca15730d78d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaction Detail",
+			"item": [
+				{
+					"name": "Get Transaction Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/transaction-details/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transaction-details",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Transaction Detail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Rizal\",\r\n    \"phone_number\": \"08213123131\",\r\n    \"address\": \"RUmah\",\r\n    \"created_at\": \"Wed Dec 22 2021 17:54:27 GMT+0700 (Western Indonesia Time)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/transaction-details/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transaction-details",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Transaction Detail",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/transaction-details/61c3042350d90ca15730d78f",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transaction-details",
+								"61c3042350d90ca15730d78f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Transaction Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/transaction-details/61c3041a50d90ca15730d78d",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transaction-details",
+								"61c3041a50d90ca15730d78d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Transaction Detail",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Akhdan Firdaus\",\r\n    \"phone_number\": \"08213123131\",\r\n    \"address\": \"RUmah\",\r\n    \"created_at\": \"Wed Dec 22 2021 17:54:27 GMT+0700 (Western Indonesia Time)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/transaction-details/61c3041a50d90ca15730d78d",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transaction-details",
+								"61c3041a50d90ca15730d78d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Report",
+			"item": [
+				{
+					"name": "daily",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/report/daily",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"report",
+								"daily"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "weekly",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/report/weekly",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"report",
+								"weekly"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "monthly",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/report/monthly",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"report",
+								"monthly"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "yearly",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/report/yearly",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"report",
+								"yearly"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
